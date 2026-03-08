@@ -38,3 +38,31 @@ Karena *template* ini menggunakan Tailwind via CDN, kamu **tidak perlu** mengins
 1. **Clone repository ini:**
    ```bash
    git clone [https://github.com/ziyad/futuristic-portfolio.git](https://github.com/ziyad/futuristic-portfolio.git)
+
+2. Buka foldernya:
+
+Bash
+
+cd futuristic-portfolio
+
+3. Jalankan: Buka file Porto.html langsung di browser kamu, atau gunakan ekstensi Live Server di VS Code agar lebih nyaman.
+
+🎨 Customization / Cara Modifikasi
+Template ini sangat mudah disesuaikan dengan profil kamu sendiri:
+
+1. Ganti Teks & Bahasa: Buka file Porto.html, scroll ke bagian paling bawah ke dalam <script>. Temukan object const translations = { ... }. Ganti teks bahasa Indonesia dan Inggris di sana sesuai profil kamu.
+
+2. Ganti Link Sosial Media:
+Cari tag href="https://github.com/ziyad" (Gunakan Ctrl+F atau Cmd+F) lalu ganti dengan username kamu.
+
+3. Ganti Warna Utama:
+Di bagian <head>, cari tailwind.config. Kamu bisa mengubah kode hex pada neonBlue dan neonPurple untuk mengganti tema warna keseluruhan.
+
+🤝 Let's Connect!
+Kalau kamu pakai template ini buat portofolio kamu, jangan lupa tag aku ya biar aku bisa lihat hasilnya!
+
+TikTok: @ziyad
+
+Instagram: @ziyad
+
+If you found this template helpful, please consider giving it a ⭐ on GitHub!
