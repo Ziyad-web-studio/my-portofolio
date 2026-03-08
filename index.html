@@ -51,7 +51,7 @@
         "sameAs": [
           "https://instagram.com/ziyad",
           "https://github.com/ziyad",
-          "https://linkedin.com/in/ziyad"
+          "https://tiktok.com/@ziyad"
         ]
       }
     </script>
@@ -87,9 +87,9 @@
   <body class="bg-gradient-to-b from-[#070a16] via-[#0b1020] to-[#04060d] text-slate-100 selection:bg-cyan-300/20">
     <div class="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_10%_18%,rgba(91,190,255,.18),transparent_38%),radial-gradient(circle_at_85%_8%,rgba(177,108,255,.15),transparent_40%),radial-gradient(circle_at_55%_92%,rgba(57,255,199,.12),transparent_36%)]"></div>
 
-    <header class="sticky top-0 z-40 border-b border-white/10 bg-slate-950/70 backdrop-blur-xl">
+    <header class="sticky top-0 z-40 border-b border-white/15 bg-slate-900/45 backdrop-blur-2xl supports-[backdrop-filter]:bg-slate-900/35">
       <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#hero" class="text-lg font-semibold tracking-wide md:text-xl">ZIYAD<span class="text-neonBlue">.DEV</span></a>
+        <a href="#hero" class="rounded-xl border border-white/25 bg-white/10 px-3 py-1.5 text-sm font-semibold tracking-wide shadow-[inset_0_1px_0_rgba(255,255,255,0.25)] backdrop-blur-xl md:text-base">ziyad<span class="text-neonBlue">.indevs.in</span></a>
 
         <button id="menuBtn" class="rounded-lg border border-white/20 p-2 md:hidden" aria-label="Toggle Menu">
           <i data-lucide="menu" class="h-5 w-5"></i>
@@ -138,11 +138,10 @@
             <div class="mt-8 flex flex-wrap gap-4">
               <a href="#projects" class="rounded-lg bg-gradient-to-r from-cyan-400 to-indigo-500 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:scale-105">View Project</a>
               <a href="#contact" class="rounded-lg border border-white/20 px-5 py-3 text-sm font-semibold transition hover:border-cyan-300/70 hover:text-cyan-200">Contact Me</a>
-              <a href="#" class="rounded-lg border border-emerald-300/40 bg-emerald-400/10 px-5 py-3 text-sm font-semibold text-emerald-200 transition hover:bg-emerald-300/20">Download CV</a>
-            </div>
+                          </div>
             <div class="mt-6 flex items-center gap-4 text-slate-300">
               <a href="https://github.com/ziyad" class="transition hover:text-neonBlue" aria-label="GitHub"><i data-lucide="github"></i></a>
-              <a href="https://linkedin.com/in/ziyad" class="transition hover:text-neonBlue" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+              <a href="https://tiktok.com/@ziyad" class="transition hover:text-neonBlue" aria-label="TikTok"><i data-lucide="music2"></i></a>
               <a href="https://instagram.com/ziyad" class="transition hover:text-neonBlue" aria-label="Instagram"><i data-lucide="instagram"></i></a>
             </div>
           </div>
@@ -192,14 +191,14 @@
       <section id="projects" class="reveal py-20">
         <div class="mb-8 flex flex-wrap items-center justify-between gap-3">
           <h2 class="text-3xl font-bold">Featured Projects</h2>
-          <div class="flex gap-2 text-xs">
-            <span class="rounded-full border border-cyan-300/40 bg-cyan-300/10 px-3 py-1">All</span>
-            <span class="rounded-full border border-white/20 px-3 py-1">Web App</span>
-            <span class="rounded-full border border-white/20 px-3 py-1">Content</span>
+          <div class="flex gap-2 text-xs" id="projectFilters">
+            <button data-filter="all" class="filter-btn rounded-full border border-cyan-300/40 bg-cyan-300/10 px-3 py-1 text-cyan-100">All</button>
+            <button data-filter="web" class="filter-btn rounded-full border border-white/20 px-3 py-1 transition hover:border-cyan-300/50">Web App</button>
+            <button data-filter="content" class="filter-btn rounded-full border border-white/20 px-3 py-1 transition hover:border-cyan-300/50">Content</button>
           </div>
         </div>
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <article class="group rounded-2xl border border-white/10 bg-panel p-6 transition hover:-translate-y-1 hover:shadow-glow">
+          <article data-category="web" class="project-card group rounded-2xl border border-white/10 bg-panel p-6 transition hover:-translate-y-1 hover:shadow-glow">
             <h3 class="text-lg font-semibold">Creator Dashboard</h3>
             <p class="mt-2 text-sm text-slate-300">Dashboard performa konten lintas platform dengan visual analitik dan rekomendasi growth.</p>
             <div class="mt-4 flex gap-2 text-xs text-cyan-200">
@@ -212,7 +211,7 @@
             </div>
           </article>
 
-          <article class="group rounded-2xl border border-white/10 bg-panel p-6 transition hover:-translate-y-1 hover:shadow-glow">
+          <article data-category="content" class="project-card group rounded-2xl border border-white/10 bg-panel p-6 transition hover:-translate-y-1 hover:shadow-glow">
             <h3 class="text-lg font-semibold">Campaign Landing Page</h3>
             <p class="mt-2 text-sm text-slate-300">Landing page launch produk dengan konversi CTA tinggi dan micro-interaction modern.</p>
             <div class="mt-4 flex gap-2 text-xs text-cyan-200">
@@ -225,7 +224,7 @@
             </div>
           </article>
 
-          <article class="group rounded-2xl border border-white/10 bg-panel p-6 transition hover:-translate-y-1 hover:shadow-glow">
+          <article data-category="web" class="project-card group rounded-2xl border border-white/10 bg-panel p-6 transition hover:-translate-y-1 hover:shadow-glow">
             <h3 class="text-lg font-semibold">Personal Brand Site</h3>
             <p class="mt-2 text-sm text-slate-300">Website personal branding dengan fokus kecepatan, struktur SEO, dan social proof.</p>
             <div class="mt-4 flex gap-2 text-xs text-cyan-200">
@@ -243,12 +242,30 @@
       <section id="skills" class="reveal py-20">
         <h2 class="mb-8 text-3xl font-bold">Skills & Tech Stack</h2>
         <div class="grid gap-4 text-sm sm:grid-cols-2 md:grid-cols-3">
-          <div class="rounded-xl border border-white/10 bg-panel p-4 transition hover:border-cyan-300/50">HTML, CSS, JavaScript</div>
-          <div class="rounded-xl border border-white/10 bg-panel p-4 transition hover:border-cyan-300/50">Tailwind CSS</div>
-          <div class="rounded-xl border border-white/10 bg-panel p-4 transition hover:border-cyan-300/50">React Basics</div>
-          <div class="rounded-xl border border-white/10 bg-panel p-4 transition hover:border-cyan-300/50">Content Strategy</div>
-          <div class="rounded-xl border border-white/10 bg-panel p-4 transition hover:border-cyan-300/50">Video Editing</div>
-          <div class="rounded-xl border border-white/10 bg-panel p-4 transition hover:border-cyan-300/50">On-page SEO</div>
+          <div class="rounded-xl border border-white/10 bg-panel p-4 transition hover:border-cyan-300/50">
+            <i data-lucide="file-code-2" class="mb-2 h-5 w-5 text-orange-300"></i>
+            HTML
+          </div>
+          <div class="rounded-xl border border-white/10 bg-panel p-4 transition hover:border-cyan-300/50">
+            <i data-lucide="palette" class="mb-2 h-5 w-5 text-sky-300"></i>
+            CSS
+          </div>
+          <div class="rounded-xl border border-white/10 bg-panel p-4 transition hover:border-cyan-300/50">
+            <i data-lucide="braces" class="mb-2 h-5 w-5 text-yellow-300"></i>
+            JavaScript
+          </div>
+          <div class="rounded-xl border border-white/10 bg-panel p-4 transition hover:border-cyan-300/50">
+            <i data-lucide="wind" class="mb-2 h-5 w-5 text-cyan-300"></i>
+            Tailwind CSS
+          </div>
+          <div class="rounded-xl border border-white/10 bg-panel p-4 transition hover:border-cyan-300/50">
+            <i data-lucide="monitor-smartphone" class="mb-2 h-5 w-5 text-violet-300"></i>
+            React Basics
+          </div>
+          <div class="rounded-xl border border-white/10 bg-panel p-4 transition hover:border-cyan-300/50">
+            <i data-lucide="search" class="mb-2 h-5 w-5 text-emerald-300"></i>
+            On-page SEO
+          </div>
         </div>
       </section>
 
@@ -289,20 +306,6 @@
         </div>
       </section>
 
-      <section id="testimonials" class="reveal py-20">
-        <h2 class="mb-8 text-3xl font-bold">Testimonials</h2>
-        <div class="grid gap-6 md:grid-cols-2">
-          <blockquote class="rounded-2xl border border-white/10 bg-panel p-6">
-            <p class="text-sm text-slate-300">"Ziyad berhasil ningkatin kualitas visual campaign kami dan web launch berjalan smooth banget."</p>
-            <footer class="mt-4 text-sm text-cyan-200">— Aulia, Brand Manager</footer>
-          </blockquote>
-          <blockquote class="rounded-2xl border border-white/10 bg-panel p-6">
-            <p class="text-sm text-slate-300">"Kolaborasi enak, cepat, dan hasilnya clean. Performa website kami naik signifikan."</p>
-            <footer class="mt-4 text-sm text-cyan-200">— Reza, Startup Founder</footer>
-          </blockquote>
-        </div>
-      </section>
-
       <section id="contact" class="reveal py-20">
         <div class="rounded-2xl border border-white/10 bg-panel p-8 md:p-10">
           <h2 class="text-3xl font-bold">Contact</h2>
@@ -316,8 +319,8 @@
               <a href="https://instagram.com/ziyad" class="inline-flex items-center gap-2 rounded-lg border border-white/20 px-4 py-2 transition hover:border-cyan-300/50">
                 <i data-lucide="instagram" class="h-4 w-4"></i> @ziyad
               </a>
-              <a href="https://linkedin.com/in/ziyad" class="inline-flex items-center gap-2 rounded-lg border border-white/20 px-4 py-2 transition hover:border-cyan-300/50">
-                <i data-lucide="linkedin" class="h-4 w-4"></i> /in/ziyad
+              <a href="https://tiktok.com/@ziyad" class="inline-flex items-center gap-2 rounded-lg border border-white/20 px-4 py-2 transition hover:border-cyan-300/50">
+                <i data-lucide="music2" class="h-4 w-4"></i> @ziyad
               </a>
             </div>
 
@@ -367,6 +370,26 @@
       document.querySelectorAll('.mobile-link').forEach((link) =>
         link.addEventListener('click', () => mobileNav.classList.add('hidden'))
       );
+
+
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const projectCards = document.querySelectorAll('.project-card');
+      filterButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const filter = button.dataset.filter;
+          filterButtons.forEach((btn) => {
+            btn.classList.remove('border-cyan-300/40', 'bg-cyan-300/10', 'text-cyan-100');
+            btn.classList.add('border-white/20');
+          });
+          button.classList.add('border-cyan-300/40', 'bg-cyan-300/10', 'text-cyan-100');
+          button.classList.remove('border-white/20');
+
+          projectCards.forEach((card) => {
+            const show = filter === 'all' || card.dataset.category === filter;
+            card.classList.toggle('hidden', !show);
+          });
+        });
+      });
 
       const toTop = document.getElementById('toTop');
       window.addEventListener('scroll', () => {
