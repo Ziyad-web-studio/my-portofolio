@@ -40,8 +40,8 @@ Karena *template* ini menggunakan Tailwind via CDN, kamu **tidak perlu** mengins
    git clone [https://github.com/ziyad/futuristic-portfolio.git](https://github.com/ziyad/futuristic-portfolio.git)
 
 2. **Buka foldernya:**
-
-cd futuristic-portfolio
+   ```bash
+   cd futuristic-portfolio
 
 3. **Jalankan:**
 Buka file Porto.html langsung di browser kamu, atau gunakan ekstensi Live Server di VS Code agar lebih nyaman.
