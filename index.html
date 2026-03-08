@@ -32,10 +32,15 @@
               fadeInUp: {
                 '0%': { opacity: '0', transform: 'translateY(28px)' },
                 '100%': { opacity: '1', transform: 'translateY(0)' }
+              },
+              marquee: {
+                '0%': { transform: 'translateX(0%)' },
+                '100%': { transform: 'translateX(-100%)' }
               }
             },
             animation: {
-              fadeInUp: 'fadeInUp .75s ease forwards'
+              fadeInUp: 'fadeInUp .75s ease forwards',
+              marquee: 'marquee 25s linear infinite'
             }
           }
         }
@@ -98,8 +103,9 @@
     </header>
 
     <main class="mx-auto max-w-6xl px-6 pt-16">
-      <section id="hero" class="reveal flex min-h-[88vh] items-center py-16 md:py-24">
-        <div class="grid w-full items-center gap-10 md:grid-cols-2">
+      <section id="hero" class="reveal relative flex min-h-[90vh] flex-col justify-between py-12 md:py-20">
+        
+        <div class="my-auto grid w-full items-center gap-10 md:grid-cols-2">
           <div>
             <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-cyan-200">
               <i data-lucide="sparkles" class="h-4 w-4"></i>
@@ -144,6 +150,38 @@
               </div>
             </div>
           </div>
+        </div>
+
+        <div class="mt-16 flex w-full flex-col items-center gap-8">
+          
+          <a href="#about" class="group flex flex-col items-center gap-2 text-slate-500 transition hover:text-cyan-300" aria-label="Scroll down">
+            <span class="text-[10px] font-semibold tracking-widest uppercase" data-i18n="hero_scroll">GULIR KE BAWAH</span>
+            <i data-lucide="mouse" class="h-5 w-5 animate-bounce"></i>
+          </a>
+
+          <div class="flex w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+            <div class="flex shrink-0 animate-marquee items-center justify-around gap-12 pr-12">
+              <div class="flex items-center gap-2 text-sm text-slate-400 font-medium"><i data-lucide="file-code-2" class="h-4 w-4"></i> HTML5</div>
+              <div class="flex items-center gap-2 text-sm text-slate-400 font-medium"><i data-lucide="palette" class="h-4 w-4"></i> CSS3</div>
+              <div class="flex items-center gap-2 text-sm text-slate-400 font-medium"><i data-lucide="braces" class="h-4 w-4"></i> JavaScript</div>
+              <div class="flex items-center gap-2 text-sm text-slate-400 font-medium"><i data-lucide="wind" class="h-4 w-4"></i> Tailwind CSS</div>
+              <div class="flex items-center gap-2 text-sm text-slate-400 font-medium"><i data-lucide="monitor-smartphone" class="h-4 w-4"></i> React</div>
+              <div class="flex items-center gap-2 text-sm text-slate-400 font-medium"><i data-lucide="pen-tool" class="h-4 w-4"></i> Figma</div>
+              <div class="flex items-center gap-2 text-sm text-slate-400 font-medium"><i data-lucide="clapperboard" class="h-4 w-4"></i> Video Editing</div>
+              <div class="flex items-center gap-2 text-sm text-slate-400 font-medium"><i data-lucide="bot" class="h-4 w-4"></i> AI Prompting</div>
+            </div>
+            <div aria-hidden="true" class="flex shrink-0 animate-marquee items-center justify-around gap-12 pr-12">
+              <div class="flex items-center gap-2 text-sm text-slate-400 font-medium"><i data-lucide="file-code-2" class="h-4 w-4"></i> HTML5</div>
+              <div class="flex items-center gap-2 text-sm text-slate-400 font-medium"><i data-lucide="palette" class="h-4 w-4"></i> CSS3</div>
+              <div class="flex items-center gap-2 text-sm text-slate-400 font-medium"><i data-lucide="braces" class="h-4 w-4"></i> JavaScript</div>
+              <div class="flex items-center gap-2 text-sm text-slate-400 font-medium"><i data-lucide="wind" class="h-4 w-4"></i> Tailwind CSS</div>
+              <div class="flex items-center gap-2 text-sm text-slate-400 font-medium"><i data-lucide="monitor-smartphone" class="h-4 w-4"></i> React</div>
+              <div class="flex items-center gap-2 text-sm text-slate-400 font-medium"><i data-lucide="pen-tool" class="h-4 w-4"></i> Figma</div>
+              <div class="flex items-center gap-2 text-sm text-slate-400 font-medium"><i data-lucide="clapperboard" class="h-4 w-4"></i> Video Editing</div>
+              <div class="flex items-center gap-2 text-sm text-slate-400 font-medium"><i data-lucide="bot" class="h-4 w-4"></i> AI Prompting</div>
+            </div>
+          </div>
+          
         </div>
       </section>
 
@@ -282,7 +320,7 @@
         <h2 class="mb-8 text-3xl font-bold" data-i18n="sec_exp">Experience</h2>
         <div class="space-y-5">
           <div class="rounded-2xl border border-white/10 bg-panel p-6 transition hover:shadow-glow">
-            <p class="text-sm text-cyan-200" data-i18n="exp1_date">2023 - Present</p>
+            <p class="text-sm text-cyan-200" data-i18n="exp1_date">2023 - Sekarang</p>
             <h3 class="mt-1 text-xl font-semibold" data-i18n="exp1_title">Lead Content Creator · Nova Media Lab</h3>
             <p class="mt-2 text-sm text-slate-300" data-i18n="exp1_desc">Memimpin tim kreatif, mengembangkan strategi konten social media, dan meningkatkan engagement campaign secara berkelanjutan.</p>
           </div>
@@ -447,6 +485,7 @@
           hero_badge: "Content Creator • Front-End Developer • Tech Enthusiast",
           hero_hello: "Halo, saya",
           hero_desc: "Saya menggabungkan kreativitas konten, UI modern, dan teknologi web untuk bantu personal brand dan bisnis tampil menonjol di era digital. Membangun produk ber-impact tinggi.",
+          hero_scroll: "GULIR KE BAWAH",
           btn_view_project: "View Project",
           btn_contact_me: "Contact Me",
           stat_web: "Project web dibangun",
@@ -512,6 +551,7 @@
           hero_badge: "Content Creator • Front-End Developer • Tech Enthusiast",
           hero_hello: "Hello, I am",
           hero_desc: "I merge content creativity, modern UI, and web tech to help personal brands and businesses stand out digitally. Building high-impact products.",
+          hero_scroll: "SCROLL DOWN",
           btn_view_project: "View Projects",
           btn_contact_me: "Contact Me",
           stat_web: "Web projects built",
@@ -575,7 +615,6 @@
         document.querySelectorAll('[data-i18n]').forEach(el => {
           const key = el.getAttribute('data-i18n');
           if (translations[currentLang][key]) {
-            // Cek apakah elemen itu input/textarea buat ganti placeholdernya
             if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
               el.placeholder = translations[currentLang][key];
             } else {
@@ -584,7 +623,6 @@
           }
         });
 
-        // Update teks di tombol toggle
         document.querySelector('.lang-label').textContent = translations[currentLang].toggle_desktop;
         document.querySelector('.lang-label-mobile').textContent = translations[currentLang].toggle_mobile;
       }
@@ -597,7 +635,6 @@
         });
       });
 
-      // Jalanin saat load awal
       applyTranslations();
     </script>
   </body>
